@@ -23,7 +23,7 @@ In this prototype, we created a reusable button component called `MyButton`. Thi
 ### Example Usage
 
 ```javascript
-import MyButton from '../components/MyButton';
+import MyButton from './components/MyButton';
 
 <MyButton
   label="Click Me"
