@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Reusable Components in Next.js Prototype
 
-## Getting Started
+## What are Components?
 
-First, run the development server:
+**Components** are independent, reusable pieces of UI that help you build complex user interfaces by combining simple building blocks. In frameworks like React and Next.js, components allow you to:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Encapsulate logic and styles** for a specific part of the UI.
+- **Reuse code** across different parts of your application.
+- **Customize behavior and appearance** using properties (props).
+
+For example, a button, a navigation bar, or a card can each be a component.
+
+---
+
+## How are Components Used in This Prototype?
+
+In this prototype, we created a reusable button component called `MyButton`. This component:
+
+- Accepts props like `label`, `onClick`, and `style` to customize its text, behavior, and appearance.
+- Is used in multiple pages (`index.js`, `about.js`) to demonstrate reusability.
+- Helps keep the code DRY (Don't Repeat Yourself) and consistent.
+
+### Example Usage
+
+```javascript
+import MyButton from '../components/MyButton';
+
+<MyButton
+  label="Click Me"
+  onClick={() => alert('Button clicked!')}
+  style={{ backgroundColor: 'skyblue' }}
+/>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can use `MyButton` anywhere in your app, passing different props to change its look and function.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Benefits
 
-## Learn More
+- **Consistency:** UI elements look and behave the same everywhere.
+- **Maintainability:** Update the component in one place to change it everywhere.
+- **Productivity:** Build faster by reusing existing components.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Run
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Install dependencies:  
+   `npm install`
+2. Start the development server:  
+   `npm run dev`
+3. Visit [http://localhost:3000](http://localhost:3000) to see the prototype in action.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
