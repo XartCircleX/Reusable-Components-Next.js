@@ -17,7 +17,7 @@ For example, a button, a navigation bar, or a card can each be a component.
 In this prototype, we created a reusable button component called `MyButton`. This component:
 
 - Accepts props like `label`, `onClick`, and `style` to customize its text, behavior, and appearance.
-- Is used in multiple pages (`index.js`, `about.js`) to demonstrate reusability.
+- Is used in multiple times in (`index.js`) to demonstrate reusability.
 - Helps keep the code DRY (Don't Repeat Yourself) and consistent.
 
 ### Example Usage
